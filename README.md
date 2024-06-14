@@ -13,7 +13,7 @@ As an example of explanation video: [Rival](https://youtu.be/EDkw-Qq8-ks?si=UiGB
 1. Download the latest release from github. [link](https://github.com/Noobgam/BoycottAhriSkin/releases/download/readme-release/main.exe)
 2. Open league
 3. Run the binary
-4Enter any queue/match you want, Ahri will get automatically banned when it's your turn
+4. Enter any queue/match you want, Ahri will get automatically banned when it's your turn
 
 # Will I get banned for it?
 
