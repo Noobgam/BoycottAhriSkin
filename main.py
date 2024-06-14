@@ -35,12 +35,12 @@ def main():
                     f"/lol-champ-select/v1/session/actions/{action_id}",
                     data={"championId": AHRI_CHAMPION_ID},
                 )
-                await asyncio.sleep(1)
+                await asyncio.sleep(0.1)
                 await connection.request(
                     "post",
                     f"/lol-champ-select/v1/session/actions/{action_id}/complete",
                 )
-                await asyncio.sleep(1)
+                await asyncio.sleep(0.1)
 
     @connector.ws.register(
         "/lol-champ-select/v1/session",
@@ -58,12 +58,12 @@ def main():
         },
     )
     async def updated(connection: Connection, event: WebsocketEventResponse):
-        logging.info(event.data)
+        logging.info(f"Update: {event.data}")
         await try_to_ban_ahri(connection, event.data)
 
     connector.start()
 
 
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.DEBUG)
+    logging.basicConfig(level=logging.INFO)
     main()
